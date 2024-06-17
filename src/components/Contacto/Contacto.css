@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la pantalla */
+  background-color: #ffffff00; /* Un color de fondo suave */
+  font-family: "Montserrat", sans-serif;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center; /* Cambio para centrar los elementos del formulario */
+  width: 40%; /* Ajuste del ancho del formulario */
+  max-width: 500px; /* Máximo ancho del formulario */
+  padding: 2rem; /* Espaciado interior para que no esté pegado al borde */
+  background-color: #2bccc4; /* Fondo blanco para el formulario */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para destacar el formulario */
+  border-radius: 1rem;
+}
+
+.formulario input, .formulario textarea {
+  padding: 0.8rem;
+  width: 100%; /* Para que tome el ancho del formulario */
+  border-radius: 0.5rem;
+  border: 2px solid #c34262;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+  outline: none;
+  border-color: #fa8072; /* Cambio de color al enfocar */
+}
+
+.consulta {
+  height: 150px;
+  resize: none; /* Deshabilita el redimensionamiento */
+}
+
+.formulario button {
+  background-color: #c34262; /* Color de fondo para el botón */
+  color: white;
+  width: auto; /* Auto para que se ajuste al texto */
+  padding: 0.8rem 1.6rem; /* Ajuste de padding para que sea más grande */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none; /* No border */
+  transition: background-color 0.2s, color 0.2s; /* Transición suave */
+}
+
+.formulario button:hover {
+  background-color: #fa8072; /* Cambio de color al pasar el ratón */
+  color: #fff;
+}
+
+/* Añade variables de colores para facilitar la edición */
+:root {
+  --clr-main: #fa8072; /* Variable para el color principal */
+}

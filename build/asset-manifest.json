@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ArianneRios/react-Arinee.git/static/css/main.5209f9cc.css",
+    "main.js": "/ArianneRios/react-Arinee.git/static/js/main.89af6c59.js",
+    "static/media/disenoCaja.jpg": "/ArianneRios/react-Arinee.git/static/media/disenoCaja.bd268b00876851b39be8.jpg",
+    "index.html": "/ArianneRios/react-Arinee.git/index.html",
+    "main.5209f9cc.css.map": "/ArianneRios/react-Arinee.git/static/css/main.5209f9cc.css.map",
+    "main.89af6c59.js.map": "/ArianneRios/react-Arinee.git/static/js/main.89af6c59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5209f9cc.css",
+    "static/js/main.89af6c59.js"
+  ]
+}
