@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-Arinee/static/css/main.02d634bf.css",
+    "main.js": "/react-Arinee/static/js/main.aee76d71.js",
+    "static/media/disenoCaja.jpg": "/react-Arinee/static/media/disenoCaja.bd268b00876851b39be8.jpg",
+    "index.html": "/react-Arinee/index.html",
+    "main.02d634bf.css.map": "/react-Arinee/static/css/main.02d634bf.css.map",
+    "main.aee76d71.js.map": "/react-Arinee/static/js/main.aee76d71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02d634bf.css",
+    "static/js/main.aee76d71.js"
+  ]
+}
