@@ -1,0 +1,263 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(255, 243, 243, 0.85), rgba(255, 230, 230, 0.85)), 
+              url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 6rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  box-shadow: inset 0 -10px 20px rgba(0,0,0,0.02);
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--clr-fucsia);
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgb(80, 80, 80);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--clr-fucsia);
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(195, 66, 98, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-gray-);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--clr-fucsia);
+  padding: 0.8rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid var(--clr-fucsia);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--clr-fucsia);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Sections General */
+.section-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  color: var(--clr-fucsia);
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--clr-main);
+  border-radius: 2px;
+}
+
+/* Categorías */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-tortas {
+  background: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80") center/cover no-repeat;
+}
+
+.card-tartas {
+  background: url("https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80") center/cover no-repeat;
+}
+
+.card-tentaciones {
+  background: url("https://images.unsplash.com/photo-1548907040-4d42b52125e0?auto=format&fit=crop&w=600&q=80") center/cover no-repeat;
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.2));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.category-card:hover .category-overlay {
+  background: linear-gradient(to top, rgba(195, 66, 98, 0.8) 40%, rgba(0,0,0,0.2));
+}
+
+.category-overlay h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.category-overlay p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Favoritos */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.status-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--clr-gray-light);
+  padding: 2rem;
+}
+
+.error-text {
+  color: red;
+}
+
+/* Beneficios */
+.benefits-section {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(224, 188, 136, 0.2);
+  border-bottom: 1px solid rgba(224, 188, 136, 0.2);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+}
+
+.benefit-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: var(--clr-fucsia);
+  margin: 0;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  max-width: 300px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+  }
+}

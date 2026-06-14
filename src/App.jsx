@@ -7,6 +7,7 @@ import Contacto from "./components/Contacto/Contacto";
 import { CartProvider } from "./components/context/CartContext";
 import Carrito from "./components/Carrito/Carrito";
 import Checkout from "./components/Checkout/Checkout";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Navbar />
 
           <Routes>
-            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/" element={<Home />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/productos" element={<ItemListContainer />} />
             <Route

@@ -8,11 +8,11 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="logo">
         <img
-          src="../img/iconos/logo.png "
-          alt="logo-lucia"
+          src={`${process.env.PUBLIC_URL}/img/iconos/LogoLN.png`}
+          alt="Logo Pastelería"
           className="img-logo"
-        ></img>
-        <h1>Arine Rios Llanos CI: 14046843 LP Pastelería </h1>
+        />
+        <h1 className="logo-title">Arianne Rios Pastelería</h1>
       </Link>
       <ul className="menu">
         <li>

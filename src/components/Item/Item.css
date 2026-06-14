@@ -1,36 +1,101 @@
 .producto {
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 12px;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
-.producto > div {
-  padding: 1rem;
-  color: rgb(58, 58, 58);
-  background-color: rgba(248, 244, 244, 0.9);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .producto > img {
   width: 100%;
-  aspect-ratio: 2/1.5;
+  height: 220px;
   object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-.producto .ver-mas {
+.producto-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(58, 58, 58);
+}
+
+.producto-info .titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--clr-fucsia);
+}
+
+.producto-info .descripcion {
+  font-size: 0.9rem;
+  color: rgb(110, 110, 110);
+  line-height: 1.4;
+  margin: 0;
+  height: 48px; /* Approximate space for 2 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.producto-info .precio {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  color: rgb(80, 80, 80);
+}
+
+.producto-info .precio-destacado {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--clr-main-dark);
+}
+
+.producto-info .categoria {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--clr-gray-light);
+  margin: 0;
+  font-weight: 600;
+}
+
+.producto-info .ver-mas {
+  display: block;
+  text-align: center;
   text-decoration: none;
-  background-color: var(--clr-main);
+  background-color: var(--clr-fucsia);
   color: white;
-  padding: 0.5rem;
-  width: max-content;
-  border-radius: 0.5rem;
-  transition: 0.2s;
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: auto; /* Push button to the bottom of the card */
+  border: none;
+  cursor: pointer;
 }
 
-.producto .ver-mas:hover {
-  background-color: rgb(58, 58, 58);
+.producto-info .ver-mas:hover {
+  background-color: var(--clr-gray-);
   color: white;
+}
+
+.producto-info .ver-mas:active {
+  transform: scale(0.98);
 }

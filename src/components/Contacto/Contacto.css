@@ -1,61 +1,332 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
-  min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la pantalla */
-  background-color: #ffffff00; /* Un color de fondo suave */
-  font-family: "Montserrat", sans-serif;
+.contact-page-container {
+  padding-bottom: 4rem;
 }
 
-.formulario {
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.contact-column-left {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center; /* Cambio para centrar los elementos del formulario */
-  width: 40%; /* Ajuste del ancho del formulario */
-  max-width: 500px; /* Máximo ancho del formulario */
-  padding: 2rem; /* Espaciado interior para que no esté pegado al borde */
-  background-color: #2bccc4; /* Fondo blanco para el formulario */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para destacar el formulario */
-  border-radius: 1rem;
 }
 
-.formulario input, .formulario textarea {
-  padding: 0.8rem;
-  width: 100%; /* Para que tome el ancho del formulario */
-  border-radius: 0.5rem;
-  border: 2px solid #c34262;
+.contact-form-card,
+.contact-info-card,
+.assistant-chat-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(58, 58, 58);
 }
 
-.formulario input:focus, .formulario textarea:focus {
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--clr-fucsia);
+  margin: 0 0 1.5rem 0;
+  border-bottom: 2px solid rgba(224, 188, 136, 0.2);
+  padding-bottom: 8px;
+}
+
+/* Success Banner */
+.contact-success-banner {
+  background-color: rgba(46, 204, 113, 0.1);
+  border-left: 4px solid #2ecc71;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  color: #27ae60;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Form Styles */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario-contacto select {
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario-contacto select:focus {
   outline: none;
-  border-color: #fa8072; /* Cambio de color al enfocar */
+  border-color: var(--clr-fucsia);
 }
 
-.consulta {
-  height: 150px;
-  resize: none; /* Deshabilita el redimensionamiento */
+.mensaje-textarea {
+  height: 120px;
+  resize: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.formulario button {
-  background-color: #c34262; /* Color de fondo para el botón */
+.btn-contacto-enviar {
+  background-color: var(--clr-fucsia);
   color: white;
-  width: auto; /* Auto para que se ajuste al texto */
-  padding: 0.8rem 1.6rem; /* Ajuste de padding para que sea más grande */
-  border-radius: 0.5rem;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(195, 66, 98, 0.2);
+  width: 100%;
+}
+
+.btn-contacto-enviar:hover {
+  background-color: var(--clr-gray-);
+  transform: translateY(-1px);
+}
+
+.btn-contacto-enviar:active {
+  transform: scale(0.98);
+}
+
+/* Info Card Styles */
+.info-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 1.2rem 0;
+  color: var(--clr-main-dark);
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-gray-light);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
   font-size: 1rem;
-  border: none; /* No border */
-  transition: background-color 0.2s, color 0.2s; /* Transición suave */
+  font-weight: 600;
+  color: rgb(58, 58, 58);
+  margin: 0;
 }
 
-.formulario button:hover {
-  background-color: #fa8072; /* Cambio de color al pasar el ratón */
-  color: #fff;
+.info-footer {
+  font-size: 0.85rem;
+  color: var(--clr-fucsia);
+  font-weight: 500;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 1rem;
 }
 
-/* Añade variables de colores para facilitar la edición */
-:root {
-  --clr-main: #fa8072; /* Variable para el color principal */
+/* Assistant Chat Styles */
+.assistant-chat-card {
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  padding: 1.5rem;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.chat-header .avatar {
+  background-color: var(--clr-fucsia);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 5px rgba(195, 66, 98, 0.3);
+}
+
+.chat-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.assistant-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--clr-gray-dark);
+}
+
+.assistant-status {
+  font-size: 0.75rem;
+  color: var(--clr-gray-light);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+/* Messages Window */
+.chat-messages-window {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(248, 244, 244, 0.4);
+  padding: 1rem;
+}
+
+.chat-message-bubble {
+  max-width: 85%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  position: relative;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.assistant-bubble {
+  align-self: flex-start;
+  background-color: #fff1f3; /* soft rose background */
+  color: rgb(80, 80, 80);
+  border-bottom-left-radius: 2px;
+  border: 1px solid rgba(195, 66, 98, 0.1);
+}
+
+.user-bubble {
+  align-self: flex-end;
+  background-color: #f0f0f0;
+  color: rgb(58, 58, 58);
+  border-bottom-right-radius: 2px;
+}
+
+.bubble-text {
+  margin: 0;
+}
+
+.bubble-time {
+  font-size: 0.7rem;
+  color: var(--clr-gray-light);
+  display: block;
+  text-align: right;
+  margin-top: 0.3rem;
+}
+
+/* Quick Actions */
+.chat-quick-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 1rem;
+}
+
+.quick-actions-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-gray-light);
+  margin: 0 0 0.6rem 0;
+}
+
+.quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-height: 110px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.quick-buttons button {
+  background-color: white;
+  color: var(--clr-fucsia);
+  border: 1px solid rgba(195, 66, 98, 0.2);
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.quick-buttons button:hover {
+  background-color: var(--clr-fucsia);
+  color: white;
+  border-color: var(--clr-fucsia);
+  transform: translateY(-1px);
+}
+
+.quick-buttons button:active {
+  transform: scale(0.98);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(46, 204, 113, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
 }

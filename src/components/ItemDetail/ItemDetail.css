@@ -1,27 +1,57 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  overflow: hidden;
-}
 .producto-detalle {
   font-family: "Montserrat", sans-serif;
-  padding-block: 2rem;
+  padding: 2.5rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .producto-detalle {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
 }
 
 .producto-detalle img {
   width: 100%;
-  border-radius: 1rem;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+
 .producto-descripcion {
-  background-color: rgba(248, 244, 244, 0.9);
-  border-radius: 1rem;
-  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+
 .nombre {
-  color: rgb(58, 58, 58);
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-fucsia);
+  margin: 0;
+}
+
+.producto-descripcion .descripcion {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgb(80, 80, 80);
+  margin: 0;
+}
+
+.producto-descripcion .precio {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--clr-main-dark);
+  margin: 0;
 }

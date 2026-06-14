@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../context/CartContext";
+import { getImageUrl } from "../../utils/images";
 
 const ItemDetail = ({ item }) => {
   const { carrito, agregarAlCarrito } = useContext(CartContext);
@@ -19,7 +20,13 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="container">
       <div className="producto-detalle">
-        <img src={item.img} alt="{item.nombre}" />
+        <img
+          src={getImageUrl(item.img)}
+          alt={item.titulo}
+          onError={(e) => {
+            e.currentTarget.src = `${process.env.PUBLIC_URL}/img/Tortas/torta-deco-entera.jpg`;
+          }}
+        />
         <div className="producto-descripcion">
           <h3 className="nombre">{item.titulo}</h3>
           <p className="descripcion">{item.descripcion}</p>

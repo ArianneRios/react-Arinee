@@ -8,10 +8,10 @@ const CartWidget = () => {
 
   return (
     <div>
-      <Link className="menu-link" to="/carrito">
+      <Link className="cart-link" to="/carrito">
         <img
           className="icono-carrito"
-          src="../img/iconos/carrito-rosa.png"
+          src={`${process.env.PUBLIC_URL}/img/iconos/carrito-rosa.png`}
           alt="Carrito Rosa"
         />
         <span className="cart-item-count">{cantidadEnCarrito()}</span>
